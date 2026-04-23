@@ -13,7 +13,7 @@ app.get("/",(req,res) =>{
 
 // Pastikan ini diletakkan di bawah semua route lainnya
 app.use((req, res) => {
-  res.status(404).sendFile(path.resolve(__dirname, '../apu/404.html'));
+  res.status(404).sendFile(path.resolve(__dirname, '../api/404.html'));
 });
 
 /* SERVER */
