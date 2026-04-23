@@ -3,17 +3,17 @@ const path = require("path");
 const app = express();
 const port = 80
 /* STATIC */
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../api')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/",(req,res) =>{
-  res.sendFile(path.resolve(__dirname, '../public/index.html'))
+  res.sendFile(path.resolve(__dirname, '../api/index.html'))
 });
 
 // Pastikan ini diletakkan di bawah semua route lainnya
 app.use((req, res) => {
-  res.status(404).sendFile(path.resolve(__dirname, '../public/404.html'));
+  res.status(404).sendFile(path.resolve(__dirname, '../apu/404.html'));
 });
 
 /* SERVER */
